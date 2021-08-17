@@ -26,7 +26,7 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 
 * Start OpenVPN server process
 
-      docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN nubacuk/docker-openvpn:arm64
+      docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN --restart=always --name openvpn nubacuk/docker-openvpn:arm64
 
 * Generate a client certificate without a passphrase
 

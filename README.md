@@ -5,7 +5,7 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 #### Upstream Links
 
 * Docker Registry @ [nubacuk/docker-openvpn:arm64](https://hub.docker.com/r/nubacuk/docker-openvpn:arm64/)
-* GitHub @ [kylemanna/docker-openvpn](https://github.com/kylemanna/docker-openvpn)
+* Original GitHub @ [kylemanna/docker-openvpn](https://github.com/kylemanna/docker-openvpn)
 
 ## Quick Start for ARM64
 
@@ -188,13 +188,8 @@ of a guarantee in the future.
 ## Originally Tested On
 
 * Docker hosts:
-  * server a [Digital Ocean](https://www.digitalocean.com/?refcode=d19f7fe88c94) Droplet with 512 MB RAM running Ubuntu 14.04
+  * server a [Oracle](https://cloud.oracle.com/compute/instances) Droplet with VM.Standard.A1.Flex (4CPU Ampere and 24GB GB RAM) running Oracle 8.
 * Clients
-  * Android App OpenVPN Connect 1.1.14 (built 56)
-     * OpenVPN core 3.0 android armv7a thumb2 32-bit
-  * OS X Mavericks with Tunnelblick 3.4beta26 (build 3828) using openvpn-2.3.4
+  * Android App OpenVPN Connect
+  * OS X Monterey with Tunnelblick
   * ArchLinux OpenVPN pkg 2.3.4-1
-
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkylemanna%2Fdocker-openvpn.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkylemanna%2Fdocker-openvpn?ref=badge_large)

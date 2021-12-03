@@ -76,7 +76,7 @@ If you prefer to use `docker-compose` please refer to the [documentation](docs/d
 
 * Create an environment variable with the name DEBUG and value of 1 to enable debug output (using "docker -e").
 
-        docker run -v $OVPN_DATA:/etc/openvpn -p 1194:1194/udp --cap-add=NET_ADMIN -e DEBUG=1 nubacuk/docker-openvpn:arm64
+        docker run -v $OVPN_DATA:/etc/openvpn -p 1194:1194/udp --cap-add=NET_ADMIN -e DEBUG=1 nubacuk/docker-openvpn:aarch64
 
 * Test using a client that has openvpn installed correctly
 

@@ -1,3 +1,10 @@
+# Differences from the original.
+
+updated alpine
+added dns cloudflare
+added to duplicate_cn
+key size changed 2048> 4096
+
 # OpenVPN for Docker
 
 OpenVPN server in a Docker container complete with an EasyRSA PKI CA.

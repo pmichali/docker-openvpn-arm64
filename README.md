@@ -36,7 +36,17 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 
       docker run -v $OVPN_DATA:/etc/openvpn --rm nubacuk/docker-openvpn:aarch64 ovpn_getclient CLIENTNAME > CLIENTNAME.ovpn
 
-## Next Steps
+## ERRORS
+
+      modprobe: can't change directory to '/lib/modules': No such file or directory
+      modprobe: can't change directory to '/lib/modules': No such file or directory
+      iptables v1.8.4 (legacy): can't initialize iptables table `nat': Table does not exist (do you need to insmod?)
+      Perhaps iptables or your kernel needs to be upgraded.
+
+Furthermore, on my system (CentOS / RockyLinux) I had to run the following on the host:
+
+sudo modprobe iptable_filter
+sudo modprobe iptable_nat
 
 ### More Reading
 

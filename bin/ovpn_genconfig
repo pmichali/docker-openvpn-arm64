@@ -285,7 +285,7 @@ fi
 
 # Apply defaults. If dns servers were not defined with -n, use google nameservers
 set +u
-[ -z "$OVPN_DNS_SERVERS" ] && OVPN_DNS_SERVERS=("8.8.8.8" "8.8.4.4")
+[ -z "$OVPN_DNS_SERVERS" ] && OVPN_DNS_SERVERS=("1.1.1.1" "1.0.0.1" "8.8.8.8")
 [ -z "$OVPN_PROTO" ] && OVPN_PROTO=udp
 [ -z "$OVPN_PORT" ] && OVPN_PORT=1194
 set -u
@@ -329,6 +329,7 @@ key-direction 0
 keepalive $OVPN_KEEPALIVE
 persist-key
 persist-tun
+duplicate_cn
 
 proto $OVPN_PROTO
 # Rely on Docker to do port mapping, internally always 1194

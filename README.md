@@ -1,6 +1,6 @@
 # Differences from the original.
 
-updated alpine  
+updated alpine and packages
 added dns cloudflare  
 added to duplicate_cn  
 key size changed 2048 > 4096  

@@ -7,7 +7,7 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 * Docker Registry @ [nubacuk/docker-openvpn:arm64](https://hub.docker.com/r/nubacuk/docker-openvpn:arm64/)
 * Original GitHub @ [kylemanna/docker-openvpn](https://github.com/kylemanna/docker-openvpn)
 
-## Quick Start for ARM64
+## Quick Start for aarch64
 
 * Pick a name for the `$OVPN_DATA` data volume container. It's recommended to
   use the `ovpn-data-` prefix to operate seamlessly with the reference systemd
@@ -21,20 +21,20 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
   private key used by the newly generated certificate authority.
 
       docker volume create --name $OVPN_DATA
-      docker run -v $OVPN_DATA:/etc/openvpn --rm nubacuk/docker-openvpn:arm64 ovpn_genconfig -u udp://VPN.SERVERNAME.COM
-      docker run -v $OVPN_DATA:/etc/openvpn --rm -it nubacuk/docker-openvpn:arm64 ovpn_initpki
+      docker run -v $OVPN_DATA:/etc/openvpn --rm nubacuk/docker-openvpn:aarch64 ovpn_genconfig -u udp://VPN.SERVERNAME.COM
+      docker run -v $OVPN_DATA:/etc/openvpn --rm -it nubacuk/docker-openvpn:aarch64 ovpn_initpki
 
 * Start OpenVPN server process
 
-      docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN --restart=always --name openvpn nubacuk/docker-openvpn:arm64
+      docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN --restart=always --name openvpn nubacuk/docker-openvpn:aarch64
 
 * Generate a client certificate without a passphrase
 
-      docker run -v $OVPN_DATA:/etc/openvpn --rm -it nubacuk/docker-openvpn:arm64 easyrsa build-client-full CLIENTNAME nopass
+      docker run -v $OVPN_DATA:/etc/openvpn --rm -it nubacuk/docker-openvpn:aarch64 easyrsa build-client-full CLIENTNAME nopass
 
 * Retrieve the client configuration with embedded certificates
 
-      docker run -v $OVPN_DATA:/etc/openvpn --rm nubacuk/docker-openvpn:arm64 ovpn_getclient CLIENTNAME > CLIENTNAME.ovpn
+      docker run -v $OVPN_DATA:/etc/openvpn --rm nubacuk/docker-openvpn:aarch64 ovpn_getclient CLIENTNAME > CLIENTNAME.ovpn
 
 ## Next Steps
 

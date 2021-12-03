@@ -45,8 +45,8 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 
 Furthermore, on my system (CentOS / RockyLinux) I had to run the following on the host:  
 
-sudo modprobe iptable_filter  
-sudo modprobe iptable_nat  
+      sudo modprobe iptable_filter  
+      sudo modprobe iptable_nat  
 
 ### More Reading
 

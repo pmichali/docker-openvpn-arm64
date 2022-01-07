@@ -11,7 +11,7 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 
 #### Upstream Links
 
-* Docker Registry @ [nubacuk/docker-openvpn:aarch64](https://hub.docker.com/r/nubacuk/docker-openvpn:aarch64)
+* Docker Registry @ [nubacuk/docker-openvpn](https://hub.docker.com/r/nubacuk/docker-openvpn)
 * Original GitHub @ [kylemanna/docker-openvpn](https://github.com/kylemanna/docker-openvpn)
 
 ## Quick Start for aarch64

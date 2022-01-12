@@ -42,6 +42,9 @@ user nobody
 group nogroup
 mute-replay-warning
 tls-version-min 1.2
+persist-key
+persist-tun
+comp-lzo no
 mute 20
 
 remote $OVPN_CN $OVPN_PORT $OVPN_PROTO"
